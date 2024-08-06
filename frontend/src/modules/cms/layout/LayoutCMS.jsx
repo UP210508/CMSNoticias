@@ -6,7 +6,9 @@ export const LayoutCMS = ({ children }) => {
       <Header />
 
       <div className="layout-cms__container">
-        <Menu />
+        <div className="layout-cms__menu">
+          <Menu />
+        </div>
         <div className="layout-cms__page">
           { children }
         </div>

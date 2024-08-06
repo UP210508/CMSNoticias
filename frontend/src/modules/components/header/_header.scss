@@ -1,3 +1,48 @@
+@use '../../../sass/abstracts/variables' as v;
+@use '../../../sass/abstracts/mixins' as m;
+
 .header {
   
+  padding: 1.5rem 4rem;
+  background-color: v.$color-blue;
+  color: #fff;
+
+  &__logo {
+    width: 4rem;
+    margin-right: 1rem;
+  }
+
+  &__name {
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  &__first {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__second {
+    display: flex;
+    align-items: center;
+  }
+
+  &__photoBox {
+    margin-right: 2rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid currentColor;
+  }
+
+  &__photo {
+    font-size: 2rem;
+    color: v.$color-white;
+  }
+
+  &__profession {
+    text-align: right;
+    font-weight: 200;
+  }
 }

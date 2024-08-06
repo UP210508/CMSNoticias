@@ -19,7 +19,7 @@ export const Login = () => {
         </div>
         <div className="form__field">
           <label className="form__label">Contraseña</label>
-          <div className="form__password">
+          <div className="form__icon">
             <input
               placeholder="Ingrese su contraseña"
               name="password"

@@ -16,5 +16,11 @@
     cursor: pointer;
     color: v.$color-text-bold;
   }
+  
+  &--search {
+    cursor: pointer;
+    color: v.$color-text-bold;
+    padding-right: 1rem;
+  }
 
 }
