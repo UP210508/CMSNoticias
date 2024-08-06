@@ -1,5 +1,4 @@
-import { Header, Menu } from "../../components"
-import { ButtonAddNotice } from "../../components/button-add-notice/ButtonAddNotice"
+import { Footer, Header, Menu } from "../../components"
 
 export const LayoutCMS = ({ children }) => {
   return (
@@ -12,8 +11,10 @@ export const LayoutCMS = ({ children }) => {
         </div>
         <div className="layout-cms__page">
           { children }
+          <Footer />
         </div>
       </div>
+
     </div>
   )
 }

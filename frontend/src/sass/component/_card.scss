@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.card {
+
+  background: #fff;
+  height: 100%;
+  padding: .5rem;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .15);
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  
+  &__imageBox {
+    flex-basis: 18rem;
+    overflow: hidden;
+    border-radius: 10px;
+
+    &:hover {
+      .card__image {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__image {
+    transition: all .4s ease;
+    border-radius: 10px;
+    height: 100%;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 2rem;
+    display: grid;
+    place-content: center;
+  }
+
+  &__text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: v.$color-purple;
+  }
+
+  &__author {
+    color: v.$color-text-bold;
+    font-weight: 300;
+    text-align: right;
+    font-size: 1.2rem;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #ddd;
+  }
+
+}

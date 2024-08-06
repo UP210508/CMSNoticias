@@ -2,11 +2,12 @@
 @use '../../../sass/abstracts/mixins' as m;
 
 .layout-cms {
-  
+
+  background: v.$color-gray;
+
   &__page {
-    width: 100%;
-    margin-left: 27rem;
-    padding-top: 1rem;
+    margin-left: 20rem;
+    padding: 10rem 15rem 0 15rem;
   }
 
 }
