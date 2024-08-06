@@ -1,0 +1,76 @@
+@use '../../../sass/abstracts/variables' as v;
+@use '../../../sass/abstracts/mixins' as m;
+
+.layout-auth {
+  height: 100vh;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  } 
+
+  &__image {
+    background-color: v.$color-gray;
+    height: 100vh;
+    width: 100%;
+    border-left: 1px solid v.$color-gray;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    width: 60%;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  &__logo {
+    width: 20rem;
+    margin-bottom: -5rem;
+  }
+
+  &__bgImage {
+    width: 50rem;
+  }
+
+  &__menu {
+    background-color: v.$color-blue;
+    width: 40rem;
+    border-radius: 100px;
+    margin-bottom: 4rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: v.$color-white;
+    padding: .6rem;
+    border: 1px solid v.$color-blue;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    background-color: v.$color-blue;
+    transition: all .4s ease-out;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+
+    &:hover {
+      background-color: v.$color-white;
+      color: v.$color-blue;
+    }
+
+    &--active {
+      background-color: v.$color-white;
+      color: v.$color-blue;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 2rem;
+  }
+
+}

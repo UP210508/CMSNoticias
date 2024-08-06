@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.btn {
+ 
+  &--blue {
+    @include m.button( 
+      v.$color-purple, 
+      lighten( v.$color-purple, 30% ) ,
+      v.$color-white,
+      v.$color-white,
+      100%
+    )
+  }
+
+}
