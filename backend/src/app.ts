@@ -1,5 +1,4 @@
-import express from 'express';
-import cors from 'cors';
+import { envs } from "./config/plugins/envs.plugin";
 import { AppRouter } from "./presentation/routes";
 import { Server } from "./presentation/server";
 
@@ -10,9 +9,9 @@ import { Server } from "./presentation/server";
 async function main() {
 
   const server = new Server({
-    port: 4000,
+    port: envs.PORT,
     router: AppRouter.routes,
-    publichPath: 'public',
+    publichPath: envs.PUBLIC_PATH,
   })
 
   await server.start();
