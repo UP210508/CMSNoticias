@@ -42,7 +42,7 @@ const section2 = [
   {
     icon: 'bx-user',
     link: 'Perfil',
-    path: '/cms/pefil'
+    path: '/cms/perfil'
   },
   {
     icon: 'bx-stats',
