@@ -12,8 +12,10 @@ export const LayoutCMS = ({ children }) => {
         </div>
         <div className="layout-cms__page">
           { children }
+          <footer>Footer</footer> 
         </div>
       </div>
+
     </div>
   )
 }

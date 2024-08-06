@@ -7,7 +7,7 @@ export const uiSlice = createSlice({
       modal: {
         isOpen: false,
         content: '',
-      }
+      },
     },
     reducers: {
 
@@ -17,7 +17,7 @@ export const uiSlice = createSlice({
 
       setModal: ( state, { payload } ) => {
         state.modal = payload;
-      }
+      },
 
     }
 })

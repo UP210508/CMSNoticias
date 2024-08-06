@@ -3,6 +3,7 @@
 
 .card {
 
+  background: #fff;
   height: 100%;
   padding: .5rem;
   box-shadow: 0 3px 3px rgba(0, 0, 0, .15);
@@ -10,7 +11,7 @@
   border: 1px solid #ddd;
   
   &__imageBox {
-    flex-basis: 20rem;
+    flex-basis: 18rem;
     overflow: hidden;
     border-radius: 10px;
 
