@@ -37,7 +37,7 @@ export const MenuSection = ({ title, links }) => {
       <nav ref={bodyRef} className="menu__nav">
         <ul className="menu__list flex flex-column">
           {links.map((link) => (
-            <NavLink to={link.path} className={`menu__link`}>
+            <NavLink to={link.path} className={({isActive}) => `menu__link ${isActive && 'menu__link--active'}`}>
               <i className={`bx ${link.icon} menu__icon`}></i>
               {link.link}
             </NavLink>
