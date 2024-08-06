@@ -1,0 +1,55 @@
+@use '../../../sass/abstracts/variables' as v;
+@use '../../../sass/abstracts/mixins' as m;
+
+.pagination {
+
+  &__numbers {
+    padding: 0 1rem;
+  }
+
+  &__box {
+    margin-right: 1rem;
+    background-color: v.$color-white;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 5px;
+    padding: .5rem;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    &:hover {
+      background-color: v.$color-blue;
+      color: v.$color-white;
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    &--active {
+      background-color: v.$color-blue;
+      color: v.$color-white;
+    }
+  }
+  
+  &__button {
+    border-radius: 5px;
+    padding: .5rem;
+    background-color: v.$color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease;
+    
+    &:hover {
+      color: v.$color-white;
+      background-color: v.$color-blue;
+    }
+  }
+
+  &__icon {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+}

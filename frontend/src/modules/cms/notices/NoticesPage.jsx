@@ -3,6 +3,7 @@ import { LayoutCMS } from "../layout/LayoutCMS"
 import { useNotices, usePage } from "../../hooks"
 import { NoticesList } from "./NoticesList";
 import { NoticesSelected } from "./NoticesSelected";
+import { Pagination } from "../../components/pagination/Pagination";
 
 export const NoticesPage = () => {
 
@@ -29,6 +30,10 @@ export const NoticesPage = () => {
 
       <div className="notices__content">
         <div className="notices__notices">
+          <div className="notices__pagination flex flex-between">
+            <h4>Tus creaciones</h4>
+            <Pagination />
+          </div>
           <NoticesList notices={ notices } />
         </div>
         <NoticesSelected />
