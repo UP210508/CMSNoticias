@@ -2,3 +2,8 @@
 @use './base';
 @use './components';
 @use './layout';
+
+// auth styles
+@use '../modules/auth';
+
+@use './base/utilities'

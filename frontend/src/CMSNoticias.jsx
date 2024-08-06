@@ -1,5 +1,9 @@
+import { AppRouter } from "./AppRouter"
+
 export const CMSNoticias = () => {
   return (
-    <div>CMSNoticias</div>
+    <>
+      <AppRouter />
+    </>
   )
 }
