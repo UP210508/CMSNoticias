@@ -1,4 +1,5 @@
 import { Header, Menu } from "../../components"
+import { ButtonAddNotice } from "../../components/button-add-notice/ButtonAddNotice"
 
 export const LayoutCMS = ({ children }) => {
   return (
