@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  overflow-x: hidden
+}
+
+a {
+  display: inline-block;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  background-color: none;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  border: none; 
+  background-color: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
