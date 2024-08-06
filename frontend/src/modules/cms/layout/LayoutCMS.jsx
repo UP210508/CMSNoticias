@@ -1,4 +1,4 @@
-import { Header, Menu } from "../../components"
+import { Footer, Header, Menu } from "../../components"
 
 export const LayoutCMS = ({ children }) => {
   return (
@@ -11,7 +11,7 @@ export const LayoutCMS = ({ children }) => {
         </div>
         <div className="layout-cms__page">
           { children }
-          <footer>Footer</footer> 
+          <Footer />
         </div>
       </div>
 
