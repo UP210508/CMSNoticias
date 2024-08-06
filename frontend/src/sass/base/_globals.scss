@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as v;
+
 *,
 *::before,
 *::after {
@@ -10,9 +12,13 @@ html {
   overflow-x: hidden
 }
 
+body {
+  color: v.$color-text-regular;
+}
+
 a {
   display: inline-block;
-  text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -23,8 +29,12 @@ button {
 }
 
 input, select, textarea {
-  border: none; 
+  border: 1px solid #ccc; 
   background-color: none;
+}
+
+*:focus {
+  outline: none;
 }
 
 img {

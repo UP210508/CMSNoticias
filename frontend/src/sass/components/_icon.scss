@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.icon {
+
+  font-size: 2rem;
+  line-height: unset;
+  
+  &--blue {
+    color: v.$color-blue;
+    cursor: pointer;
+    padding-right: 1rem;
+  }
+  
+  &--gray {
+    cursor: pointer;
+    color: v.$color-text-bold;
+  }
+
+}
