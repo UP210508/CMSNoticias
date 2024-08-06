@@ -4,7 +4,7 @@
 .layout-cms {
   
   &__page {
-    width: 100%;
+    width: calc(100% - 30rem);
     margin-left: 27rem;
     padding-top: 1rem;
   }
