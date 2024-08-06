@@ -27,7 +27,7 @@ export const Register = () => {
         </div>
         <div className="form__field">
           <label className="form__label">Contraseña</label>
-          <div className="form__password">
+          <div className="form__icon">
             <input
               placeholder="Ingrese una contraseña"
               name="password"
@@ -44,7 +44,7 @@ export const Register = () => {
         </div>
         <div className="form__field">
           <label className="form__label">Confirma tu Contraseña</label>
-          <div className="form__password">
+          <div className="form__icon">
             <input
               placeholder="Ingrese una contraseña"
               name="password"

@@ -1,0 +1,12 @@
+@use '../../../sass/abstracts/variables' as v;
+@use '../../../sass/abstracts/mixins' as m;
+
+.layout-cms {
+  
+  &__page {
+    width: 100%;
+    margin-left: 27rem;
+    padding-top: 1rem;
+  }
+
+}

@@ -1,9 +1,15 @@
 @use './abstracts';
 @use './base';
-@use './components';
+@use './component';
 @use './layout';
 
 // auth styles
 @use '../modules/auth';
+
+// cms styles
+@use '../modules/cms';
+
+// componentes styles
+@use '../modules/components';
 
 @use './base/utilities'

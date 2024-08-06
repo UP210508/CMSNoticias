@@ -9,6 +9,20 @@
     margin-bottom: 4rem;
   }
 
+  &--search {
+
+    margin-left: 5rem;
+
+    .form__input {
+      width: 40rem;
+    }
+
+    .form__field {
+      margin-bottom: 0;
+    }
+
+  }
+
   &__field {
     display: flex;
     flex-direction: column;
@@ -21,7 +35,9 @@
     color: v.$color-text-bold;
   }
 
-  &__password {
+  &__icon {
+    border-radius: 5px;
+    background-color: v.$color-white;
     width: 100%;
     border: 1px solid #ccc;
     display: flex;
@@ -35,6 +51,7 @@
   }
 
   &__input {
+    border-radius: 5px;
     padding: .5rem;
   }
 

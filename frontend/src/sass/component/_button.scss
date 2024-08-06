@@ -13,4 +13,16 @@
     )
   }
 
+  &--outline {
+    @include m.button(
+      v.$color-white,
+      v.$color-blue,
+      v.$color-blue,
+      v.$color-white,
+      100%
+    );
+    justify-content: center;
+    gap: 1rem;
+  }
+
 }
