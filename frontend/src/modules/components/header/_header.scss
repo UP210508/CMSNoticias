@@ -41,8 +41,54 @@
     color: v.$color-white;
   }
 
+  &__info {
+    margin-right: 2rem;
+  }
+
   &__profession {
     text-align: right;
     font-weight: 200;
+  }
+
+  &__icon {
+    font-size: 2.4rem;
+    cursor: pointer;
+  }
+
+  &__actions {
+    position: relative;
+    opacity: 0;
+    z-index: -1;
+    transition: all .4s ease;
+    pointer-events: none;
+
+    &--show {
+      pointer-events: all;
+      z-index: 9;
+      opacity: 1;
+    }
+  }
+
+  &__menu {
+    background-color: v.$color-white;
+    padding: 1rem;
+    position: absolute;
+    top: 4rem;
+    right: 0rem;
+    width: 15rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+    border: 1px solid #ddd;
+    color: v.$color-blue;
+    
+    span {
+      cursor: pointer;
+      margin-left: 1rem;
+      transition: all .4s ease;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-color: #aaa;
+      }
+    }
   }
 }
