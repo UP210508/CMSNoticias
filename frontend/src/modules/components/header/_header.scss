@@ -3,9 +3,17 @@
 
 .header {
   
-  padding: 1.5rem 4rem;
+  height: 5rem;
+  width: calc(100% - 2rem);
+  position: fixed;
   background-color: v.$color-blue;
+  padding: 1rem;
   color: #fff;
+  
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+  }
 
   &__logo {
     width: 4rem;
