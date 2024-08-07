@@ -31,7 +31,9 @@ export class AuthController {
       return res.status(400).json({ error: errorMessage });
     }
 
-    // this.authService.postUser( createUserDto! )
+    this.authService.postUser( createUserDto! )
+      .then( data => res.status(201).json( data ))
+      .catch( error => this.handleErrorResponse( error, res ) )
 
   }
 

@@ -8,4 +8,5 @@ export const envs = {
   MONGO_USER: env.get('MONGO_USER').required().asString(),
   MONGO_PASSWORD: env.get('MONGO_PASSWORD').required().asString(),
   MONGO_URL: env.get('MONGO_URL').required().asString(),
+  JWT_SEED: env.get('JWT_SEED').required().asString(),
 }

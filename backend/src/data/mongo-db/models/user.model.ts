@@ -25,14 +25,8 @@ const UserSchema = new mongoose.Schema({
     minlength: 8,
   },
 
-  phone: {
-    type: String,
-    maxlength: 10,
-    unique: true,
-  },
-
   createdAt: {
-    type: String,
+    type: Date,
     required: [ true, 'Creado a obligatorio'],
   },
 
