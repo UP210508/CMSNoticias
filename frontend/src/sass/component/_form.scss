@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 
   &__label {
@@ -55,7 +55,12 @@
     padding: .5rem;
   }
 
+  span {
+    text-align: right;
+  }
+
   &__button {
+    margin-top: 2rem;
     width: 100%;
   }
 
