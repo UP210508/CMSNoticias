@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { LayoutAuth } from '../layout/LayoutAuth';
-import { useForm } from '../../hooks/useForm';
+import { useForm } from '../../hooks';
+import { useAuth } from '../../hooks/useAuth';
 
 const formData = {
   firstName: "",
@@ -35,6 +36,7 @@ export const Register = () => {
     isFormValid,
     formState,
   } = useForm( formData, formValidations );
+  const { registerUser } = useAuth();
 
   const onRegisterUser = (e) => {
     e.preventDefault();
@@ -43,8 +45,9 @@ export const Register = () => {
     if ( !isFormValid ) return;
     if ( password !== confirmPassword ) return;
 
-
+    registerUser( formState );
     setIsFormSubmitted( false );
+    onResetForm();
   }
 
   return (

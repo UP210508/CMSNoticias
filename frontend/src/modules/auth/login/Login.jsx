@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { LayoutAuth } from '../layout/LayoutAuth';
-import { useForm } from '../../hooks/useForm';
+import { useForm } from '../../hooks';
 
 const formData = {
   email: "",
@@ -44,8 +44,10 @@ export const Login = () => {
         <div className="form__field">
           <label className="form__label">Email</label>
           <input
-            placeholder="correo@correo.com"
             name="email"
+            value={email}
+            onChange={ onInputChange }
+            placeholder="correo@correo.com"
             className="form__input"
             type="email"
           />
@@ -61,8 +63,10 @@ export const Login = () => {
           <label className="form__label">Contraseña</label>
           <div className="form__icon">
             <input
-              placeholder="Ingrese su contraseña"
               name="password"
+              value={password}
+              onChange={ onInputChange }
+              placeholder="Ingrese su contraseña"
               className="form__input"
               type={showPassword ? 'text' : 'password'}
             />
