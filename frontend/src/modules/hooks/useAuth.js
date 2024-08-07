@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { startRegisteringUser } from "../store/auth/auth.thunks";
+import { startLoginRegisterUser } from "../store/auth/auth.thunks";
 
 export const useAuth = () => {
 
@@ -7,7 +7,11 @@ export const useAuth = () => {
   const { user, status } = useSelector( store => store.auth );
 
   const registerUser = ( userInformation = {} ) => {
-    dispatch( startRegisteringUser( userInformation ) );
+    dispatch( startLoginRegisterUser( userInformation, 'register' ) );
+  }
+
+  const loginUser = ( userCredentials = {} ) => {
+    dispatch( startLoginRegisterUser( userCredentials, 'login' ) );
   }
 
   return {
@@ -15,5 +19,6 @@ export const useAuth = () => {
     user,
 
     registerUser,
+    loginUser,
   }
 }

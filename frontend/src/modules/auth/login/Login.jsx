@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { LayoutAuth } from '../layout/LayoutAuth';
 import { useForm } from '../../hooks';
+import { useAuth } from '../../hooks/useAuth';
 
 const formData = {
   email: "",
@@ -27,6 +28,7 @@ export const Login = () => {
     isFormValid,
     formState
   } = useForm(formData, formValidations);
+  const { loginUser } = useAuth();
 
   const onLoginUser = (e) => {
     e.preventDefault();
@@ -34,7 +36,7 @@ export const Login = () => {
 
     if ( !isFormValid ) return;
 
-
+    loginUser( formState );
     setIsFormSubmitted( false );
   }
 
