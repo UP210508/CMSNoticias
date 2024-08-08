@@ -2,26 +2,12 @@
 @use '../../../sass/abstracts/mixins' as m;
 
 .button-add {
-
+  width: 20rem;
   margin-right: 2rem;
-  border-radius: 10px;
-  padding: 1rem 1.5rem;
-  font-weight: 600;
-  color: v.$color-white;
-  background-color: v.$color-purple;
-  transition: all .4s ease;
-  border: 1px solid transparent;
-  text-transform: uppercase;
-
-  &:hover {
-    border-color: v.$color-purple;
-    background-color: v.$color-white;
-    color: v.$color-purple;
-  }
 
   &__icon {
-    font-size: 2rem;
     margin-right: 1rem;
+    font-size: 1.6rem;
   }
 
 }

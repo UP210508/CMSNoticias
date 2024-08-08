@@ -31,10 +31,16 @@ export const NoticesPage = () => {
       <div className="notices__content">
         <div className="notices__notices">
           <div className="notices__pagination flex flex-between">
-            <h4>Tus creaciones</h4>
-            <Pagination />
+            <div className="flex flex-column">
+              <h4>Tus creaciones</h4>
+              <p className="notices__text">Puedes visualizar tus creaciones en este pantalla. Edita, crea y elimina las noticias que desees. Despierta tu lado creativo.</p>
+            </div>
           </div>
           <NoticesList notices={ notices } />
+          <div className="flex flex-between">
+            <p>Paginas</p>
+            <Pagination />
+          </div>
         </div>
         <NoticesSelected />
       </div>
