@@ -35,4 +35,14 @@
     );
   }
 
+  &--error {
+    @include m.button(
+      v.$color-error,
+      lighten( v.$color-error, 30% ) ,
+      v.$color-white,
+      v.$color-white,
+      100%
+    );
+  }
+
 }

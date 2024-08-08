@@ -1,10 +1,12 @@
 import { useRef, useState } from 'react';
 import logoWhite from '../../../assets/img/logo-white.png';
 import { useAuth } from '../../hooks/useAuth';
+import { usePage } from '../../hooks/usePage';
 
 export const Header = () => {
 
   const { logoutUser } = useAuth();
+  const { goToPage } = usePage();
   const chevronUp = useRef();
   const chevronDown = useRef();
   const menuActions = useRef();
@@ -26,7 +28,7 @@ export const Header = () => {
       <div className="header__container flex flex-between">
         <div className="header__first">
           <div className="flex flex-center">
-            <img src={ logoWhite } alt="LOGO CMS WHITE" className='header__logo' />
+            <img onClick={ () => goToPage('cms/noticias/general')} src={ logoWhite } alt="LOGO CMS WHITE" className='header__logo' />
             <p className='header__name'>CMS <br /> Noticias</p>
           </div>
           <form className="form form--search">

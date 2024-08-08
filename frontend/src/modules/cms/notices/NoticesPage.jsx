@@ -1,14 +1,12 @@
 import { ButtonAddNotice } from "../../components/button-add-notice/ButtonAddNotice"
 import { LayoutCMS } from "../layout/LayoutCMS"
-import { useNotices, usePage } from "../../hooks"
+import { useNotices } from "../../hooks"
 import { NoticesList } from "./NoticesList";
 import { NoticesSelected } from "./NoticesSelected";
-import { Pagination } from "../../components/pagination/Pagination";
+import { LocationRoute, Pagination } from "../../components";
 
 export const NoticesPage = () => {
 
-  const { getPageName } = usePage();
-  const pageName = getPageName();
   const { notices } = useNotices();
 
   return (
@@ -16,8 +14,7 @@ export const NoticesPage = () => {
 
       <header className="notices___header flex flex-between">
         <div className="notices__header-first">  
-          <p className="notices__nav">CMS / Noticias / { pageName }</p>
-          <p className="notices__title">Noticias { pageName }</p>
+          <LocationRoute />
         </div> 
         <div className="notices__header-stats flex flex-center">
           <ButtonAddNotice />

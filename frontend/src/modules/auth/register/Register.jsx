@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { LayoutAuth } from '../layout/LayoutAuth';
-import { useForm } from '../../hooks';
+import { useForm, useUI } from '../../hooks';
 import { useAuth } from '../../hooks/useAuth';
 
 const formData = {
@@ -16,7 +16,6 @@ const formValidations = {
   firstName: [ value => value.length > 1, "El nombre es obligatorio"],
   email: [ value => emailRegex.test( value ), "El email debe ser válido"],
   password: [ value => value.length >= 8, "Mínimo 8 caracteres"],
-  confirmPassword: [ value => value.length > 1, "Compruebe su contraseña"],
 }
 
 export const Register = () => {
@@ -35,16 +34,21 @@ export const Register = () => {
     onResetForm,
     isFormValid,
     formState,
-  } = useForm( formData, formValidations );
+  } = useForm( formData, {
+    ...formValidations, 
+    confirmPassword: [ value => value === password, 'Confirme su contraseña' ] } 
+  );
+
   const { registerUser } = useAuth();
+  const { showAlert } = useUI();
 
   const onRegisterUser = (e) => {
     e.preventDefault();
     setIsFormSubmitted( true );
 
     if ( !isFormValid ) return;
-    if ( password !== confirmPassword ) return;
 
+    console.log(formState);
     registerUser( formState );
     setIsFormSubmitted( false );
     onResetForm();

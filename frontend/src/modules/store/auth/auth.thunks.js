@@ -1,6 +1,8 @@
 import apiCMS from "../../../config/api/apiCMS"
-import { setIsLoading } from "../ui/ui.slice"
+import { setAlert, setIsLoading } from "../ui/ui.slice"
 import { login } from "./auth.slice"
+
+let alert = { content: '', type: ''}
 
 export const startLoginRegisterUser = ( userInformation = {}, endpoint = "" ) => {
   return async ( dispatch ) => {
@@ -13,16 +15,23 @@ export const startLoginRegisterUser = ( userInformation = {}, endpoint = "" ) =>
       dispatch( login( user ) )
       localStorage.setItem('cms-noticias', JSON.stringify( token ) );
 
+      alert.content = `Bienvenido ${ user.firstName }`;
+      alert.type = 'success';
+
     } catch (error) {
-      console.log(error);
+      const { error: errorMessage } = error.response.data;
+      alert.content = errorMessage;
+      alert.type = 'error';
     }
 
     dispatch( setIsLoading(false) )
+    dispatch( setAlert({ isOpen: true, ...alert }) )
   }
 }
 
 export const startRenewingSession = () => {
   return async( dispatch ) => {
+
     dispatch( setIsLoading(true) )
 
     try {
@@ -31,14 +40,17 @@ export const startRenewingSession = () => {
       
       dispatch( login( user ) )
       localStorage.setItem('cms-noticias', JSON.stringify( token ) );
-
-    } catch (error) {
+      alert.content = `Bienvenido ${ user.firstName }`;
+      alert.type = 'success';
       
+    } catch (error) {
       const { error: errorMessage } = error.response.data;
-      console.log(errorMessage);
-
+      alert.content = errorMessage;
+      alert.type = 'error';
     }
+    
+    dispatch( setIsLoading(false) );
+    dispatch( setAlert({ isOpen: true, ...alert }) )
 
-    dispatch( setIsLoading(false) )
   }
 }

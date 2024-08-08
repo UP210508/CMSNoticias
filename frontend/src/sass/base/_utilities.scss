@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as v;
+
 .hidden {
   display: none;
   opacity: 0;
@@ -11,6 +13,6 @@
 }
 
 .text-wrong {
-  color: #a04444;
+  color: v.$color-error;
   font-weight: 500;
 } 
