@@ -43,12 +43,15 @@
   &--error {
     color: v.$color-error;
   }
+  
+  &--info {
+    color: v.$color-blue;
+  }
 
   &__button {
     margin-top: 2rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    transition: none;
   }
 
 }

@@ -21,8 +21,6 @@
       v.$color-white,
       100%
     );
-    justify-content: center;
-    gap: 1rem;
   }
 
   &--success {
@@ -39,6 +37,16 @@
     @include m.button(
       v.$color-error,
       lighten( v.$color-error, 30% ) ,
+      v.$color-white,
+      v.$color-white,
+      100%
+    );
+  }
+
+  &--info {
+    @include m.button(
+      v.$color-blue,
+      lighten( v.$color-blue, 30% ) ,
       v.$color-white,
       v.$color-white,
       100%

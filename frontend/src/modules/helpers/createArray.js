@@ -1,3 +1,9 @@
+/**
+ * 
+ * @param {Number} length 
+ * @returns {Array<Number>}
+ */
+
 export const createArray = ( length = 0 ) => {
   const arr = new Array( length );
 

@@ -14,7 +14,7 @@
   }
 
   &__notices {
-    padding-right: 2rem;
+    padding-left: 4rem;
   }
 
   &__text {
@@ -26,13 +26,13 @@
     margin-top: 5rem;
     margin-bottom: 8rem;
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 35% 65%;
   }
 
   &__grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
     row-gap: 4rem;
     margin-bottom: 5rem;
@@ -44,7 +44,7 @@
 
   &__selected {
     background-color: v.$color-white;;
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 1rem;
     height: fit-content;
     box-shadow: 0 3px 3px rgba(0, 0, 0, .15);
@@ -53,16 +53,24 @@
       margin-bottom: 2rem;
     }
 
+    &-title {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+
     &-image {
       border-radius: 10px;
       overflow: hidden;
       margin-bottom: 2rem;
+      height: 40rem;
     }
 
     &-meta {
       margin-bottom: 2rem;
     }
-
+    
     &-info {
       font-weight: 700;
       color: v.$color-purple;
@@ -71,7 +79,7 @@
         color: v.$color-text-regular;
       }
     }
-
+    
     &-content {
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -85,5 +93,66 @@
     margin-bottom: 2rem;
   }
   
+  &__articles {
+
+    margin: 4rem 0 5rem 0;
+    
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem;
+    }
+
+    &-card {
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+    }
+
+    &-image {
+     width: 100%;
+     height: 20rem; 
+     border-radius: 5px;
+     margin-bottom: 2rem;
+    }
+
+    &-title {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: v.$color-purple;
+    }
+
+    &-content {
+      padding: 1rem;
+      padding-bottom: 0;
+      gap: 1rem;
+    }
+
+    &-text {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    &-button {
+      width: 12rem;
+      margin-top: auto;
+    }
+
+    &-author {
+      font-weight: 600;
+
+      span {
+        font-weight: 400;
+      }
+    }
+
+  }
 
 }

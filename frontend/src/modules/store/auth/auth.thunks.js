@@ -46,7 +46,7 @@ export const startRenewingSession = () => {
     } catch (error) {
       const { error: errorMessage } = error.response.data;
       alert.content = errorMessage;
-      alert.type = 'error';
+      alert.type = 'info';
     }
     
     dispatch( setIsLoading(false) );

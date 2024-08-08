@@ -9,28 +9,21 @@
   box-shadow: 0 3px 3px rgba(0, 0, 0, .15);
   border-radius: 10px;
   border: 1px solid #ddd;
-  
+
   &__imageBox {
-    flex-basis: 18rem;
+    flex-basis: 35rem;
     overflow: hidden;
     border-radius: 10px;
-
-    &:hover {
-      .card__image {
-        transform: scale(1.1);
-      }
-    }
   }
 
   &__image {
-    transition: all .4s ease;
     border-radius: 10px;
     height: 100%;
   }
 
   &__content {
     flex: 1;
-    padding: 2rem;
+    padding: 2rem 4rem;
     display: grid;
     place-content: center;
   }
