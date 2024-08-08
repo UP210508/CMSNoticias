@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
-import { startLoginRegisterUser } from "../store/auth/auth.thunks";
+import { startLoginRegisterUser, startRenewingSession } from "../store/auth/auth.thunks";
+import { logout } from "../store/auth/auth.slice";
+import { resetUI } from "../store/ui/ui.slice";
 
 export const useAuth = () => {
 
@@ -14,11 +16,23 @@ export const useAuth = () => {
     dispatch( startLoginRegisterUser( userCredentials, 'login' ) );
   }
 
+  const renewSession = () => {
+    dispatch( startRenewingSession() );
+  }
+
+  const logoutUser = () => {
+    dispatch( logout() );
+    dispatch( resetUI() );
+    localStorage.removeItem('cms-noticias');
+  }
+
   return {
     status,
     user,
 
     registerUser,
     loginUser,
+    renewSession,
+    logoutUser,
   }
 }

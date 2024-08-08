@@ -1,11 +1,11 @@
 import { AppRouter } from "./AppRouter"
-import { Provider } from 'react-redux'
-import { store } from './modules/store'
+import { Alert } from "./modules/components"
 
 export const CMSNoticias = () => {
-  return (
-    <Provider store={ store } >
-      <AppRouter />
-    </Provider>
+  return ( 
+    <>
+     <AppRouter /> 
+     <Alert />
+    </>
   )
 }

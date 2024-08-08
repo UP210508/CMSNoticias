@@ -14,7 +14,7 @@ export class AuthMiddleware {
     }
 
     if ( !authorization.startsWith('Bearer') ) {
-      return res.status(401).json({ error: "Debes iniciar sesión primero" });
+      return res.status(401).json({ error: "El Token es invalido" });
     }
 
     const token = authorization.split(' ').at(1) || '';
@@ -24,7 +24,7 @@ export class AuthMiddleware {
       const payload = await jwtGenerator.validateToken<{ id: string; }>( token );
 
       if ( !payload ) {
-        return res.status(401).json({ error: 'El Token es invalido'});
+        return res.status(401).json({ error: 'Comienza Iniciando Sesión'});
       }
 
       const user = await UserModel.findById(payload.id);
@@ -39,6 +39,8 @@ export class AuthMiddleware {
 
       const userEntity = UserEntity.fromObject( user );
       req.body.user = userEntity;
+
+      next();
 
     } catch (error) {
       console.log(`${error}`);

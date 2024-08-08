@@ -20,3 +20,25 @@ export const startLoginRegisterUser = ( userInformation = {}, endpoint = "" ) =>
     dispatch( setIsLoading(false) )
   }
 }
+
+export const startRenewingSession = () => {
+  return async( dispatch ) => {
+    dispatch( setIsLoading(true) )
+
+    try {
+      
+      const { data: { token, user } } = await apiCMS.get('/auth/renew-token');
+      
+      dispatch( login( user ) )
+      localStorage.setItem('cms-noticias', JSON.stringify( token ) );
+
+    } catch (error) {
+      
+      const { error: errorMessage } = error.response.data;
+      console.log(errorMessage);
+
+    }
+
+    dispatch( setIsLoading(false) )
+  }
+}

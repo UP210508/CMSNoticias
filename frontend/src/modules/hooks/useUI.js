@@ -1,13 +1,33 @@
 import { useDispatch, useSelector } from 'react-redux'
+import { setAlert } from '../store/ui/ui.slice';
 
 export const useUI = () =>  {
 
   const dispatch = useDispatch();
-  const { isLoading, modal } = useSelector( store => store.ui )
+  const { isLoading, alert } = useSelector( store => store.ui )
+
+  const showAlert = ( alertContent = '', alertType = '' ) => {
+    dispatch(setAlert({
+      isOpen: true,
+      content: alertContent,
+      type: alertType,
+    }))
+  }
+
+  const closeAlert = () => {
+    dispatch(setAlert({
+      isOpen: false,
+      content: '',
+      type: '',
+    }))
+  }
 
   return {
     isLoading,
-    modal,
+    alert,
+
+    showAlert,
+    closeAlert,
   }
 
 }

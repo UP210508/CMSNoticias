@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { Login } from './modules/auth/login/Login';
 import { Register } from './modules/auth/register/Register';
@@ -12,6 +13,12 @@ import { useAuth } from './modules/hooks';
 export const AppRouter = () => {
 
   const { status } = useAuth();
+
+  const { renewSession } = useAuth();
+
+  useEffect(() => {
+    renewSession();
+  }, []);
 
   return (
     <BrowserRouter>
@@ -37,6 +44,7 @@ export const AppRouter = () => {
             </>
           )
         }
+        <Route path='/*' element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>
   )
