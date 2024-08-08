@@ -1,8 +1,10 @@
 import { useRef, useState } from 'react';
 import logoWhite from '../../../assets/img/logo-white.png';
+import { useAuth } from '../../hooks/useAuth';
 
 export const Header = () => {
 
+  const { logoutUser } = useAuth();
   const chevronUp = useRef();
   const chevronDown = useRef();
   const menuActions = useRef();
@@ -54,7 +56,7 @@ export const Header = () => {
           <div ref={menuActions} className="header__actions">
             <div className="header__menu flex flex-center">
               <i className='bx bx-log-out icon icon--white'></i>
-              <span>Cerrar Sesión</span>
+              <span onClick={ logoutUser}>Cerrar Sesión</span>
             </div>
           </div>
         </div>

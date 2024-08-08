@@ -52,7 +52,7 @@ export class AuthController {
     const { user } = req.body;
 
     this.authService.getNewToken( user! )
-      .then( newToken => res.status(200).json({ token: newToken }))
+      .then( newToken => res.status(200).json({ token: newToken, user }))
       .catch( error => this.handleErrorResponse( error, res ) )
 
   }

@@ -19,10 +19,19 @@ export const uiSlice = createSlice({
         state.modal = payload;
       },
 
+      resetUI: ( state ) => {
+        state.isLoading = false;
+        state.modal = {
+          isOpen: false,
+          content: '',
+        }
+      }
+
     }
 })
 
 export const {
   setIsLoading,
   setModal,
+  resetUI,
 } = uiSlice.actions;
