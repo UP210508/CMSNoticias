@@ -4,9 +4,10 @@ export const uiSlice = createSlice({
     name: 'ui',
     initialState: {
       isLoading: false,
-      modal: {
+      alert: {
         isOpen: false,
         content: '',
+        type: ''
       },
     },
     reducers: {
@@ -15,8 +16,8 @@ export const uiSlice = createSlice({
         state.isLoading = payload;
       },
 
-      setModal: ( state, { payload } ) => {
-        state.modal = payload;
+      setAlert: ( state, { payload } ) => {
+        state.alert = payload;
       },
 
       resetUI: ( state ) => {
@@ -24,6 +25,7 @@ export const uiSlice = createSlice({
         state.modal = {
           isOpen: false,
           content: '',
+          type: '',
         }
       }
 
@@ -32,6 +34,6 @@ export const uiSlice = createSlice({
 
 export const {
   setIsLoading,
-  setModal,
+  setAlert,
   resetUI,
 } = uiSlice.actions;

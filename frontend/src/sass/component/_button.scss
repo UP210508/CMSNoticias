@@ -25,4 +25,14 @@
     gap: 1rem;
   }
 
+  &--success {
+    @include m.button(
+      v.$color-success,
+      lighten( v.$color-success, 30% ) ,
+      v.$color-white,
+      v.$color-white,
+      100%
+    );
+  }
+
 }
