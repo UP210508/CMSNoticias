@@ -7,7 +7,7 @@ export const uiSlice = createSlice({
       alert: {
         isOpen: false,
         content: '',
-        type: ''
+        type: '' // success-error-info
       },
     },
     reducers: {

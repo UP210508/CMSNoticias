@@ -27,7 +27,7 @@ export const NoticesSelected = () => {
       <p className="notices__selected-content">
         { body }
       </p>
-      <Link to={`/notice/${id}`} className="btn btn--blue">
+      <Link to={`/cms/noticias/noticia/${id}`} className="btn btn--blue">
         Ver Noticia Completa
       </Link>
     </aside>

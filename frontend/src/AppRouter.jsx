@@ -8,13 +8,12 @@ import { Stats } from './modules/cms/stats/Stats';
 import { Settings } from './modules/cms/settings/Settings';
 import { NewNotice } from './modules/cms/new-notice/NewNotice';
 import { Notice } from './modules/cms/notice/Notice';
-import { useAuth } from './modules/hooks';
+import { useAuth, useUI } from './modules/hooks';
 
 export const AppRouter = () => {
 
-  const { status } = useAuth();
-
-  const { renewSession } = useAuth();
+  const { status, renewSession } = useAuth();
+  const { showAlert } = useUI();
 
   useEffect(() => {
     renewSession();
@@ -28,8 +27,8 @@ export const AppRouter = () => {
           ? (
             <>
               <Route path='/cms/noticias/:category' element={<NoticesPage />} />
-              <Route path='/cms/noticia/:id' element={<Notice />} />
-              <Route path='/cms/nueva-noticia' element={<NewNotice />} />
+              <Route path='/cms/noticias/noticia/:id' element={<Notice />} />
+              <Route path='/cms/noticias/:category/nueva-noticia' element={<NewNotice />} />
               <Route path='/cms/perfil' element={<Profile />} />
               <Route path='/cms/estadisticas' element={<Stats />} />
               <Route path='/cms/configuracion' element={<Settings />} />

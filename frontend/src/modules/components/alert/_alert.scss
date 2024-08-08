@@ -3,7 +3,6 @@
 
 .alert {
 
-  transition: all .4s ease-out;
   position: fixed;
   z-index: -1;
   opacity: 0;
@@ -34,16 +33,22 @@
 
   &__title {
     font-size: 1.6rem;
+    margin-bottom: 2rem;
   }
 
   &--success {
     color: v.$color-success;
   }
 
+  &--error {
+    color: v.$color-error;
+  }
+
   &__button {
     margin-top: 2rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
+    transition: none;
   }
 
 }
