@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { Login } from './modules/auth/login/Login';
 import { Register } from './modules/auth/register/Register';
-import { NoticesPage } from './modules/cms/notices/NoticesPage';
+import { NoticesPage } from './modules/cms/notices/notice-page/NoticesPage';
 import { Profile } from './modules/cms/profile/Profile';
 import { Stats } from './modules/cms/stats/Stats';
 import { Settings } from './modules/cms/settings/Settings';

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { formatAuthor } from "../../helpers";
-import logoCMS from '../../../assets/img/logo.png';
+import { formatAuthor } from "../../../helpers";
+import logoCMS from '../../../../assets/img/logo.png';
 
 export const NoticeCard = ({ image, title, authors, body }) => {
   return (

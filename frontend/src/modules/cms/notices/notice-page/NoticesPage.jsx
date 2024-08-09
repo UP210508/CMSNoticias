@@ -1,10 +1,10 @@
-import { ButtonAddNotice } from '../../components/button-add-notice/ButtonAddNotice';
-import { LayoutCMS } from '../layout/LayoutCMS';
-import { useNotices } from '../../hooks';
-import { NoticesList } from './NoticesList';
-import { NoticesSelected } from './NoticesSelected';
-import { LocationRoute, Pagination } from '../../components';
-import { NoticesNews } from './NoticesNews';
+import { ButtonAddNotice, LocationRoute, Pagination } from "../../../components";
+import { useNotices } from "../../../hooks";
+import { LayoutCMS } from "../../layout/LayoutCMS";
+import { NoticesList } from "../notices-list/NoticesList";
+import { NoticesNews } from "../notices-news/NoticesNews";
+import { NoticesSelected } from "../notices-selected/NoticesSelected";
+
 
 export const NoticesPage = () => {
   const { notices } = useNotices();

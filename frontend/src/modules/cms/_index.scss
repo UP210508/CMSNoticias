@@ -1,3 +1,9 @@
 @forward './layout/layout-cms';
-@forward './notices/notices';
+
+@forward './notices/notice-card-creation/card-creation';
+@forward './notices/notice-card/card-notice';
+@forward './notices/notice-page/notices';
+@forward './notices/notices-selected/card-notice-selected';
+
+
 @forward './new-notice/new-notice';

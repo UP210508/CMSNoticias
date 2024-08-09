@@ -1,4 +1,4 @@
-import { useNotices } from '../../hooks/useNotices';
+import { useNotices } from '../../../hooks/useNotices';
 
 export const NoticeCardCreation = ({ notice }) => {
   const { id, title, img } = notice;

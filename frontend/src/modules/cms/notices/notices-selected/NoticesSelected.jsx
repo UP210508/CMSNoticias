@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { capitalizeString } from '../../helpers';
-import { useNotices } from '../../hooks';
+import { capitalizeString } from '../../../helpers';
+import { useNotices } from '../../../hooks';
 
 export const NoticesSelected = () => {
   const { selectedNotice } = useNotices();

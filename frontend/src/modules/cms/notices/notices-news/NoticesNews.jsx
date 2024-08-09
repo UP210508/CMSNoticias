@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Spinner } from '../../components';
-import { getCategoryNews, getEnvVariables } from '../../helpers';
-import { useFetch, usePage, useUI } from '../../hooks';
-import { NoticeCard } from './NoticeCard';
+import { Spinner } from '../../../components';
+import { getCategoryNews, getEnvVariables } from '../../../helpers';
+import { useFetch, usePage, useUI } from '../../../hooks';
+import { NoticeCard } from '../notice-card/NoticeCard';
 
 const { VITE_API_KEY_NEWS: apiKey } = getEnvVariables();
 

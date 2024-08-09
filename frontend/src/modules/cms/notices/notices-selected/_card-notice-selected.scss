@@ -1,5 +1,5 @@
-@use '../abstracts/variables' as v;
-@use '../abstracts/mixins' as m;
+@use '../../../../sass/abstracts/variables' as v;
+@use '../../../../sass/abstracts/mixins' as m;
 
 .card-notice-selected {
   background-color: v.$color-white;

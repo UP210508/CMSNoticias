@@ -1,4 +1,4 @@
-import { NoticeCardCreation } from './NoticeCardCreation';
+import { NoticeCardCreation } from '../notice-card-creation/NoticeCardCreation';
 
 export const NoticesList = ({ notices }) => {
   return (
