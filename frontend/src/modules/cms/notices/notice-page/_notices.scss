@@ -1,0 +1,53 @@
+@use '../../../../sass/abstracts/variables' as v;
+@use '../../../../sass/abstracts/mixins' as m;
+
+.notices {
+
+  &__cat {
+    color: #777;
+    font-weight: 600;
+    
+    span {
+      color: v.$color-text-bold;
+      font-weight: normal;
+    }
+  }
+
+  &__text {
+    width: 50%;
+    margin-top: 1rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-bottom: 5rem;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+  }
+
+  &__pagination {
+    margin-bottom: 2rem;
+  }
+  
+  &__articles {
+    margin: 4rem auto 5rem auto;
+    
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem;
+    }
+
+  }
+
+}

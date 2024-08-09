@@ -6,3 +6,4 @@ export * from './location-route/LocationRoute';
 export * from './menu/Menu';
 export * from './menu/MenuSection';
 export * from './pagination/Pagination';
+export * from './spinner/Spinner';
