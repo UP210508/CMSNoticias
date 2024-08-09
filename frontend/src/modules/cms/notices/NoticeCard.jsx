@@ -1,23 +1,34 @@
-import { useNotices } from "../../hooks/useNotices";
+import { Link } from 'react-router-dom';
+import { formatAuthor } from "../../helpers";
+import logoCMS from '../../../assets/img/logo.png';
 
-export const NoticeCard = ({ notice }) => {
-
-  const { id, title, body, author, publishDate, img } = notice;
-  const { selectNotice } = useNotices();
-
+export const NoticeCard = ({ image, title, authors, body }) => {
   return (
-    <div className='card flex'>
-      <div className="card__imageBox">
-        <img src={ img } alt={ title } className="card__image" />
+    <li className="card-notice">
+      <div className="flex flex-center">
+        <img
+          className="card-notice__image"
+          src={image || logoCMS}
+          alt={title}
+        />
       </div>
-      <div className="card__content">
-        <h2 className="card__title">{ title }</h2>
-        <p className="card__text">{body}</p>
-        <div className="flex flex-between">
-          <p className="card__author">Por: { author }</p>
-          <i onClick={ () => selectNotice( id ) } className='bx bx-show icon icon--blue'></i>
+      <div className="card-notice__content flex flex-column">
+        <div className="flex flex-start">
+          <p className="card-notice__author">
+            Escrito por: <span>{formatAuthor(authors)}</span>
+          </p>
+        </div>
+        <h3 className="card-notice__title">{title}</h3>
+        <p className="card-notice__text">{body}</p>
+        <div className="flex flex-end">
+          <Link
+            className="btn btn--info card-notice__button"
+            to="/cms/noticias/otras/noticia"
+          >
+            Ver Noticia
+          </Link>
         </div>
       </div>
-    </div>
-  )
-}
+    </li>
+  );
+};

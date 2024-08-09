@@ -5,7 +5,7 @@ import { usePage } from '../../hooks/usePage';
 
 export const Header = () => {
 
-  const { logoutUser } = useAuth();
+  const { logoutUser, user } = useAuth();
   const { goToPage } = usePage();
   const chevronUp = useRef();
   const chevronDown = useRef();
@@ -50,7 +50,7 @@ export const Header = () => {
             <i className='bx bxs-user header__photo'></i>
           </div>
           <div className="header__info">
-            <p className="header__username">Saulo Román Santillan Nava</p>
+            <p className="header__username">{ user.firstName }</p>
             <p className="header__profession">Reportero</p>
           </div>
           <i ref={chevronDown} onClick={ onShowMenuActions } className='bx bxs-chevron-down header__icon'></i>

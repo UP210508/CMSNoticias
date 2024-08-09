@@ -1,13 +1,11 @@
-import { NoticeCard } from "./NoticeCard"
+import { NoticeCardCreation } from './NoticeCardCreation';
 
 export const NoticesList = ({ notices }) => {
   return (
     <ul className="notices__grid">
-      {
-        notices.map( (notice) => (
-          <NoticeCard notice={ notice } key={ notice.id } />
-        ))
-      }
+      {notices.map((notice) => (
+        <NoticeCardCreation notice={notice} key={notice.id} />
+      ))}
     </ul>
-  )
-}
+  );
+};

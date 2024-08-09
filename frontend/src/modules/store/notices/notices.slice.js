@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const fakeData =[
   {
     id: 1,
-    title: 'Titulo de Noticia',
+    title: 'Titulo de Noticia que se va a mostrar en varias lineas si es que me lo permite',
     body: `Deserunt nisi velit et anim quis ipsum eiusmod fugiat id do. Nisi pariatur consequat adipisicing culpa do consequat voluptate voluptate. Ea commodo veniam aute cillum fugiat aliqua minim. Excepteur quis anim consequat consequat do dolor eiusmod aliquip. Pariatur laborum in ut irure esse nisi minim sunt adipisicing non.\nNulla consectetur nisi consectetur anim culpa sit adipisicing commodo culpa amet incididunt elit in. Voluptate enim nostrud sint mollit quis est labore in ea. Voluptate non Lorem ipsum consectetur pariatur eiusmod. Ipsum velit ipsum eiusmod velit cupidatat quis. Labore reprehenderit in proident consectetur Lorem elit mollit. Nisi nostrud ipsum incididunt et do officia et.`,
     author: 'Saulo Santillan',
     publishDate: new Intl.DateTimeFormat('es-MX').format( new Date() ),
@@ -30,6 +30,24 @@ const fakeData =[
   },
   {
     id: 4,
+    title: 'Titulo de Noticia',
+    body: 'Deserunt nisi velit et anim quis ipsum eiusmod fugiat id do. Nisi pariatur consequat adipisicing culpa do consequat voluptate voluptate. Ea commodo veniam aute cillum fugiat aliqua minim. Excepteur quis anim consequat consequat do dolor eiusmod aliquip. Pariatur laborum in ut irure esse nisi minim sunt adipisicing non.Nulla consectetur nisi consectetur anim culpa sit adipisicing commodo culpa amet incididunt elit in. Voluptate enim nostrud sint mollit quis est labore in ea. Duis minim mollit culpa consectetur velit dolore consectetur eu. Excepteur nostrud occaecat excepteur ipsum adipisicing. Tempor ea eu consequat enim elit ullamco in ut velit enim mollit sit fugiat eiusmod. Quis consequat enim magna sunt officia. Ipsum dolore aliqua do non commodo consequat et magna consequat ipsum tempor. Qui Lorem deserunt exercitation excepteur eiusmod reprehenderit duis et cupidatat.',
+    author: 'Saulo Santillan',
+    publishDate: new Intl.DateTimeFormat('es-MX').format( new Date() ),
+    category: 'entretenimiento',
+    img: 'https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/27f06e24bbc8b9c7ee99dc38e9cb505eb5d64bc4-1920x1080.jpg?auto=format&fit=fill&q=80&w=956',
+  },
+  {
+    id: 5,
+    title: 'Titulo de Noticia',
+    body: 'Deserunt nisi velit et anim quis ipsum eiusmod fugiat id do. Nisi pariatur consequat adipisicing culpa do consequat voluptate voluptate. Ea commodo veniam aute cillum fugiat aliqua minim. Excepteur quis anim consequat consequat do dolor eiusmod aliquip. Pariatur laborum in ut irure esse nisi minim sunt adipisicing non.Nulla consectetur nisi consectetur anim culpa sit adipisicing commodo culpa amet incididunt elit in. Voluptate enim nostrud sint mollit quis est labore in ea. Duis minim mollit culpa consectetur velit dolore consectetur eu. Excepteur nostrud occaecat excepteur ipsum adipisicing. Tempor ea eu consequat enim elit ullamco in ut velit enim mollit sit fugiat eiusmod. Quis consequat enim magna sunt officia. Ipsum dolore aliqua do non commodo consequat et magna consequat ipsum tempor. Qui Lorem deserunt exercitation excepteur eiusmod reprehenderit duis et cupidatat.',
+    author: 'Saulo Santillan',
+    publishDate: new Intl.DateTimeFormat('es-MX').format( new Date() ),
+    category: 'entretenimiento',
+    img: 'https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/27f06e24bbc8b9c7ee99dc38e9cb505eb5d64bc4-1920x1080.jpg?auto=format&fit=fill&q=80&w=956',
+  },
+  {
+    id: 6,
     title: 'Titulo de Noticia',
     body: 'Deserunt nisi velit et anim quis ipsum eiusmod fugiat id do. Nisi pariatur consequat adipisicing culpa do consequat voluptate voluptate. Ea commodo veniam aute cillum fugiat aliqua minim. Excepteur quis anim consequat consequat do dolor eiusmod aliquip. Pariatur laborum in ut irure esse nisi minim sunt adipisicing non.Nulla consectetur nisi consectetur anim culpa sit adipisicing commodo culpa amet incididunt elit in. Voluptate enim nostrud sint mollit quis est labore in ea. Duis minim mollit culpa consectetur velit dolore consectetur eu. Excepteur nostrud occaecat excepteur ipsum adipisicing. Tempor ea eu consequat enim elit ullamco in ut velit enim mollit sit fugiat eiusmod. Quis consequat enim magna sunt officia. Ipsum dolore aliqua do non commodo consequat et magna consequat ipsum tempor. Qui Lorem deserunt exercitation excepteur eiusmod reprehenderit duis et cupidatat.',
     author: 'Saulo Santillan',

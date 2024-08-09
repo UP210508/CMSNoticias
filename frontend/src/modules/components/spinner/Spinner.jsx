@@ -1,5 +1,7 @@
 export const Spinner = () => {
   return (
-    <div>Spinner</div>
+    <div className="flex flex-center h-30">
+      <span className="spinner"></span>
+    </div>
   )
 }

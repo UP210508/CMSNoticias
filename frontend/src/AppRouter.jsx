@@ -9,6 +9,7 @@ import { Settings } from './modules/cms/settings/Settings';
 import { NewNotice } from './modules/cms/new-notice/NewNotice';
 import { Notice } from './modules/cms/notice/Notice';
 import { useAuth, useUI } from './modules/hooks';
+import { OtherNotice } from './modules/cms';
 
 export const AppRouter = () => {
 
@@ -28,6 +29,7 @@ export const AppRouter = () => {
             <>
               <Route path='/cms/noticias/:category' element={<NoticesPage />} />
               <Route path='/cms/noticias/noticia/:id' element={<Notice />} />
+              <Route path='/cms/noticias/otras/noticia' element={<OtherNotice />} />
               <Route path='/cms/noticias/:category/nueva-noticia' element={<NewNotice />} />
               <Route path='/cms/perfil' element={<Profile />} />
               <Route path='/cms/estadisticas' element={<Stats />} />
