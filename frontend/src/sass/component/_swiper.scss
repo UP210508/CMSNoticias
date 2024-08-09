@@ -1,3 +1,10 @@
 .swiper {
   
+  display: flex;
+  position: relative;
+
+  &__slide {
+    position: absolute;
+  }
+
 }

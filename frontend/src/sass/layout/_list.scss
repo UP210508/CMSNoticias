@@ -1,0 +1,15 @@
+.list {
+  display: grid;
+
+  &__notices {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+  }
+  
+}
